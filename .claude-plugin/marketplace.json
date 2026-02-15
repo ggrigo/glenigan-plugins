@@ -1,0 +1,21 @@
+{
+  "name": "ggrigo-glenigan",
+  "owner": {
+    "name": "ggrigo"
+  },
+  "metadata": {
+    "description": "Glenigan construction lead qualification pipeline by Baresquare"
+  },
+  "plugins": [
+    {
+      "name": "glenigan",
+      "source": "./plugins/glenigan",
+      "description": "Lead qualification pipeline for Glenigan construction data. Import PDFs, deduplicate, classify, extract Idox keyvals, enrich with web research, profile contacts, score leads, manage CRM.",
+      "version": "2.6.0",
+      "author": {
+        "name": "Baresquare"
+      },
+      "keywords": ["glenigan", "idox", "planning", "construction", "lead-qualification", "baresquare"]
+    }
+  ]
+}

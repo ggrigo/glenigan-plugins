@@ -1,0 +1,36 @@
+{
+  "name": "glenigan",
+  "version": "2.6.0",
+  "description": "Glenigan construction lead qualification pipeline",
+  "author": {
+    "name": "Baresquare"
+  },
+  "commands": [
+    {
+      "name": "gleni-init",
+      "description": "Initialize Glenigan database and import PDF data"
+    },
+    {
+      "name": "gleni-loop",
+      "description": "Run the complete Glenigan pipeline loop"
+    },
+    {
+      "name": "gleni-pipeline",
+      "description": "Run individual pipeline stages"
+    },
+    {
+      "name": "gleni-crm",
+      "description": "Manage CRM operations and exports"
+    }
+  ],
+  "skills": [
+    {
+      "name": "gleni-ingest",
+      "description": "Ingest and process Glenigan PDF data"
+    },
+    {
+      "name": "gleni-dedup",
+      "description": "Deduplicate leads based on configured rules"
+    }
+  ]
+}

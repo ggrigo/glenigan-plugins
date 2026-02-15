@@ -1,0 +1,153 @@
+{
+  "_comment": "Client playbook. Baresquare works with this client to qualify Glenigan leads. Each client tells us what matters to them — document priorities, sector relevance, value thresholds, exclusion patterns, scoring. Switch clients by replacing this file.",
+
+  "client_name": "CILS",
+  "client_description": "Commercial & Industrial Lighting Solutions. LED retrofits, smart (and IoT) lighting controls, solar PV, energy management systems for commercial buildings.",
+
+  "services": [
+    "Large-scale LED lighting retrofits (100+ fixtures)",
+    "Smart controls integration (DALI, sensors, BMS)",
+    "Solar PV installation"
+  ],
+
+  "document_priorities": {
+    "HIGH": {
+      "keywords": [
+        "lighting", "LED", "LED retrofit", "light fixtures", "external lighting",
+        "illumination", "lux", "luminaire",
+        "energy statement", "energy strategy", "sustainability", "sustainability strategy",
+        "breeam", "carbon", "renewable", "solar", "pv", "photovoltaic",
+        "planning statement", "design and access", "heritage statement",
+        "environmental statement", "refurb", "refurbishment"
+      ],
+      "description": "Documents that directly mention lighting, energy, or sustainability — core to CILS offering"
+    },
+    "MEDIUM": {
+      "keywords": [
+        "elevation", "section", "floor plan", "roof plan",
+        "landscape", "drainage", "acoustic",
+        "officer report", "committee report", "decision notice",
+        "cover letter", "agent letter", "application form"
+      ],
+      "description": "Documents that reveal project scope and decision status"
+    },
+    "LOW": {
+      "keywords": [
+        "location plan", "block plan", "site plan", "red line",
+        "ownership certificate", "fee calculation", "validation",
+        "tree survey", "ecological", "bat survey", "noise"
+      ],
+      "description": "Rarely useful for CILS qualification — skip unless nothing better"
+    },
+    "default_unmatched": "LOW",
+    "_default_note": "When a document doesn't match any HIGH/MEDIUM/LOW keyword, assign this priority. Every document on a portal is at minimum worth cataloguing. Set to LOW to catalogue everything, or SKIP to ignore unknowns."
+  },
+
+  "_sector_note": "Sector names MUST match Glenigan PDF sector names exactly. Check DB with: SELECT DISTINCT sector_name FROM sectors",
+  "sector_relevance": {
+    "STRONG": [
+      "Hospitals", "Health Centres/Surgeries",
+      "Light Industrial", "Heavy Industrial Project", "Warehousing/Storage",
+      "Leisure Centres", "Gymnasium", "Indoor Play Areas", "Bowling Alleys",
+      "Office Buildings", "Ancillary Office Space", "Conference/Exhibition",
+      "Schools", "Schools To Sixth Form", "Colleges", "Training Centres",
+      "University Campuses",
+      "Shops", "Shop Fronts", "Supermarkets", "Shopping Centres",
+      "Hotels", "Hotels/Motels",
+      "Distribution Depots",
+      "Community Centres", "Government Buildings", "Libraries/Archives"
+    ],
+    "GOOD": [
+      "Car Showrooms",
+      "Museums/Galleries", "Theatres/Concert Halls", "Bingo Halls", "Amusement Arcades",
+      "Saunas/Solaria",
+      "Sports Fields", "Tennis Courts", "Athletic Tracks/Pitches",
+      "Golf Club Houses", "Golf Driving Ranges",
+      "Camp Sites/Holiday Vllgs",
+      "Banks/Building Socs",
+      "Dental Surgeries", "Veterinary Surgeries",
+      "Kindergartens/Nurseries",
+      "Bus/Coach Stations", "Railway Stations",
+      "Workshops", "Vehicle Maintenance",
+      "Places of Worship", "Care Homes"
+    ],
+    "EXCLUDED": [
+      "Houses", "Student Accom.", "Nursing Homes", "Residential Homes",
+      "Farm Buildings", "Animal Buildings", "Equestrian/Riding School",
+      "Bridges",
+      "Sewer Systems", "Sewage Treatment Works", "Sewage Treatment Works Storage Tanks Water Distribution",
+      "Telecom Masts", "Telecoms Buildings",
+      "Funeral Homes",
+      "Recycling Centre/Facilities",
+      "Estate Roads", "Cycleways/Footways",
+      "Demolition",
+      "Pubs/Wine Bars/Clubs", "Restaurants", "Cafés", "Fast Food Outlets"
+    ]
+  },
+
+  "value_thresholds": {
+    "qualified_min": 500000,
+    "maybe_min": 250000,
+    "big_unknown_min": 12000000,
+    "small_project_cutoff": 250000
+  },
+
+  "exclusion_patterns": {
+    "minor_alterations": [
+      "Relocation of entrance", "Shopfront alterations", "Fascia replacement",
+      "Signage installation", "Single room refurb", "Door replacement"
+    ],
+    "floodlighting": [
+      "floodlight", "floodlighting", "flood light", "flood lighting",
+      "external lighting conversion", "LED floodlight conversion"
+    ],
+    "_floodlighting_note": "Floodlighting is a different technology and market. Pure floodlight/external lighting projects = REJECTED. But if a project mixes indoor construction with outdoor floodlighting, the indoor element keeps it alive.",
+    "mobile_units": [
+      "caravan", "static caravan", "mobile home", "mobile unit",
+      "portable cabin", "modular unit"
+    ],
+    "_mobile_units_note": "Anything with caravans or mobile units = REJECTED. These are not construction projects.",
+    "change_of_use": {
+      "reject_when": "no building work described, or facade-only changes",
+      "keep_when": "real interior fit-out, construction, or industrial-to-leisure conversion",
+      "_note": "Change of use is NOT an automatic rejection. Reject if: caravans/mobile units, facade-only, no building work. Keep if: hotel/gym/leisure conversion with real construction. Industrial-to-leisure conversions are explicitly IN."
+    },
+    "sports_outdoor": [
+      "Golf course external works", "Cricket pitch",
+      "Athletics track", "Single sports pitch"
+    ],
+    "_sports_outdoor_note": "Golf driving ranges ARE in scope. Outdoor sports facilities are only excluded when the work is purely external. Mixed projects (indoor + outdoor) stay alive — the indoor element keeps them in."
+  },
+
+  "scoring": {
+    "start_date_max": 30,
+    "vertical_strong": 25,
+    "vertical_good": 10,
+    "vertical_excluded": -10,
+    "second_pass_upgraded": 15,
+    "second_pass_confirmed": 5,
+    "second_pass_downgraded": -10,
+    "value_per_100k": 5,
+    "value_cap": 50,
+    "existing_client": 20,
+    "timing_warning_months": 3,
+    "timing_sweet_spot_months": [6, 12],
+    "timing_second_priority_months": [12, 18],
+    "_timing_note": "6-12 months is ideal — early enough to influence spec and impact this FY. 12-18 months is second priority — can influence early and build pipeline."
+  },
+
+  "existing_clients": [
+    "University of Birmingham",
+    "Luton Council",
+    "Lampeter University",
+    "Siemens Energy",
+    "Basingstoke Council",
+    "Neath Council",
+    "NHS Wigan",
+    "NHS WWL",
+    "NHS IoW"
+  ],
+  "_existing_clients_note": "Also check cils.uk under 'projects' for case study names — may yield additional matches.",
+
+  "outreach_context": "CILS provides LED lighting retrofits and Solar installations in a way that maxes out the energy savings, usually achieving more than 90% compared to benchmark energy management systems. Frame Baresquare's analytics as helping CILS understand which projects are the best fit for their solutions."
+}

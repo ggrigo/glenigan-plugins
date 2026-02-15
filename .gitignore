@@ -1,0 +1,25 @@
+# Database files
+*.db
+*.db-journal
+*.sqlite
+
+# Temp files
+*.tmp
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Env
+.env
+.env.local
