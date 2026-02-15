@@ -1,10 +1,10 @@
-# Glenigan Plugins Marketplace
+# Glenigan Plugins Marketplace v2.6.1
 
 Claude plugin marketplace for Glenigan construction lead qualification tools by Baresquare.
 
 ## Available Plugins
 
-### glenigan v2.6.0
+### glenigan v2.6.1
 Lead qualification pipeline for Glenigan construction data. 
 
 **Features:**

@@ -1,3 +1,5 @@
+# Glenigan v2.6.1
+
 ---
 description: View and query the Glenigan project pipeline
 allowed-tools: Bash, Read

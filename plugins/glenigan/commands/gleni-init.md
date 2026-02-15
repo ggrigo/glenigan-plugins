@@ -1,3 +1,5 @@
+# Glenigan v2.6.1
+
 ---
 description: Initialize Glenigan pipeline database and workspace
 allowed-tools: Bash, Write, Read

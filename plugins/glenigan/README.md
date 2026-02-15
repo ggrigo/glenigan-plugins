@@ -1,4 +1,4 @@
-# Glenigan v2.6.0
+# Glenigan v2.6.1
 
 Lead qualification pipeline for Glenigan construction project data. Built by Baresquare.
 
@@ -77,7 +77,11 @@ Currently configured for **CILS** (Commercial & Industrial Lighting Solutions). 
 
 ## Version History
 
-**v2.6.0** (February 2026) — Current
+**v2.6.1** (February 2026) — Current
+- Version consistency across all components
+- Updated all commands and skills with version identifiers
+
+**v2.6.0** (February 2026) — Previous
 - WebSearch-first contact profiling (4 mandatory lookups per company)
 - Wider stakeholder discovery (Part B) with 3 research layers
 - All roles profiled, not just architects

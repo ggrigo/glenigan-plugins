@@ -1,3 +1,5 @@
+# Glenigan v2.6.1
+
 ---
 description: Manage the built-in CRM pipeline for Glenigan leads
 allowed-tools: Bash, Read, Write

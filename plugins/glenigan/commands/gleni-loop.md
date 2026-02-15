@@ -1,3 +1,5 @@
+# Glenigan v2.6.1
+
 ---
 description: Process Glenigan projects one-by-one through the enrichment pipeline
 allowed-tools: ["Bash", "Read", "Write", "mcp__playwright__playwright_navigate", "mcp__playwright__playwright_fill", "mcp__playwright__playwright_click", "mcp__playwright__playwright_evaluate", "mcp__playwright__playwright_screenshot", "mcp__playwright__playwright_get_visible_html", "mcp__playwright__playwright_get_visible_text", "mcp__playwright__playwright_close", "mcp__playwright__playwright_press_key", "mcp__Claude_in_Chrome__find", "mcp__Claude_in_Chrome__navigate", "mcp__Claude_in_Chrome__form_input", "mcp__Claude_in_Chrome__computer", "mcp__Claude_in_Chrome__read_page", "mcp__Claude_in_Chrome__get_page_text", "mcp__Claude_in_Chrome__tabs_context_mcp", "mcp__Claude_in_Chrome__tabs_create_mcp", "Task"]

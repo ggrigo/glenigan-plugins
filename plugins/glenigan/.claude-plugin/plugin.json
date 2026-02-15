@@ -1,6 +1,6 @@
 {
   "name": "glenigan",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "Lead qualification pipeline for Glenigan construction data. Classify, extract Idox keyvals, enrich with web research, profile contacts, score leads, manage CRM.",
   "author": {
     "name": "Georgios Grigoriadis",
