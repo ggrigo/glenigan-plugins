@@ -1,4 +1,4 @@
-# Glenigan v2.6.1
+# Glenigan v2.6.2
 
 ---
 description: View and query the Glenigan project pipeline

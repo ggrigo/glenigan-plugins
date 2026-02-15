@@ -1,4 +1,4 @@
-# Glenigan v2.6.1
+# Glenigan v2.6.2
 
 Lead qualification pipeline for Glenigan construction project data. Built by Baresquare.
 
@@ -77,7 +77,11 @@ Currently configured for **CILS** (Commercial & Industrial Lighting Solutions). 
 
 ## Version History
 
-**v2.6.1** (February 2026) — Current
+**v2.6.2** (February 2026) — Current
+- Removed explicit commands/skills arrays from plugin.json (Cowork auto-discovery fix)
+- Skills and commands now properly visible in Cowork plugin management UI
+
+**v2.6.1** (February 2026) — Previous
 - Version consistency across all components
 - Updated all commands and skills with version identifiers
 

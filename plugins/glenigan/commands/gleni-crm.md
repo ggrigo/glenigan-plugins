@@ -1,4 +1,4 @@
-# Glenigan v2.6.1
+# Glenigan v2.6.2
 
 ---
 description: Manage the built-in CRM pipeline for Glenigan leads
