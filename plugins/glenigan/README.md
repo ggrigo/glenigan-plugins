@@ -77,11 +77,13 @@ Currently configured for **CILS** (Commercial & Industrial Lighting Solutions). 
 
 ## Version History
 
-**v2.6.0** (February 2026) — Production Release
-- Fixed enrichment_web table reference in contacts profiling
-- Stabilized pipeline for production use
-- Enhanced error handling and retry logic
-- Improved portal extraction reliability
+**v2.6.0** (February 2026) — Current
+- WebSearch-first contact profiling (4 mandatory lookups per company)
+- Wider stakeholder discovery (Part B) with 3 research layers
+- All roles profiled, not just architects
+- Scoring validated against end-to-end pipeline test
+- Portal registry corrections (NECSWS detection, Cloudflare handling)
+- Wiring fixes: enrichment_web table name, rules.json path consistency
 
 **v2.0.0** (February 2026) — Consolidation
 - 9 skills + 5 commands → 2 skills + 4 commands + 7 reference docs
