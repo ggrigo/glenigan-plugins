@@ -28,7 +28,7 @@ targets = c.execute("""
     LEFT JOIN project_roles pr ON p.project_id = pr.project_id
     LEFT JOIN contacts c ON pr.id = c.role_id
     LEFT JOIN enrichment_portal ep ON p.project_id = ep.project_id
-    LEFT JOIN enrichment_research er ON p.project_id = er.project_id
+    LEFT JOIN enrichment_web er ON p.project_id = er.project_id
     WHERE ec.status IN ('QUALIFIED', 'MAYBE')
       AND p.project_id NOT IN (SELECT project_id FROM enrichment_contacts)
     ORDER BY p.value_numeric DESC
